@@ -43,6 +43,13 @@ class CoroutinePartitionQueue(private val partitionCount: Int) {
         return Math.abs(murmur.hashBytes(key.toByteArray()).asLong())
     }
 
+    /**
+     * Add a task to be executed in order based on the partition specified by the key.
+     *
+     * @param key
+     * @param task
+     * @return
+     */
     fun enqueue(key: String, task: suspend () -> Unit): CoroutinePartitionQueue {
         val hash = hash(key)
         val partition = (hash % partitionCount).toInt()
@@ -51,6 +58,10 @@ class CoroutinePartitionQueue(private val partitionCount: Int) {
         return this
     }
 
+    /**
+     * Await all tasks that are currently in the queue to be finished executing.
+     *
+     */
     fun await() {
         waitingToFinish = true
         taskExecutor.join()
