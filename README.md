@@ -23,6 +23,25 @@ for(row in data) {
 partitionQueue.await()
 ```
 
+## Installation
+
+Add the jitpack repository to your `build.gradle`
+
+```
+repositories {
+	...
+	maven { url 'https://jitpack.io' }
+}
+```
+
+and then add the repository as a dependency in your project
+
+```
+dependencies {
+	implementation 'com.github.champloo11:coroutine-partition-queue:v1.0.0'
+}
+
+```
 ## Purpose
 
 Often (particularly in batch processing) we find ourselves needing to process a batch of records where:
