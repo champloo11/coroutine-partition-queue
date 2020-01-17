@@ -29,8 +29,8 @@ Add the jitpack repository to your `build.gradle`
 
 ```
 repositories {
-	...
-	maven { url 'https://jitpack.io' }
+  ...
+  maven { url 'https://jitpack.io' }
 }
 ```
 
@@ -38,7 +38,7 @@ and then add the repository as a dependency in your project
 
 ```
 dependencies {
-	implementation 'com.github.champloo11:coroutine-partition-queue:v1.0.0'
+  implementation 'com.github.champloo11:coroutine-partition-queue:v1.0.0'
 }
 
 ```
