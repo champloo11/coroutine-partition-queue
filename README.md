@@ -1,5 +1,5 @@
 # Kotlin Coroutine Partition Queue
-[![Build Status](https://travis-ci.com/champloo11/coroutine-partition-queue.svg?branch=master)](https://travis-ci.com/champloo11/coroutine-partition-queue)
+[![Build Status](https://travis-ci.com/champloo11/coroutine-partition-queue.svg?branch=master)](https://travis-ci.com/champloo11/coroutine-partition-queue) [![](https://jitpack.io/v/champloo11/coroutine-partition-queue.svg)](https://jitpack.io/#champloo11/coroutine-partition-queue)
 
 Partition IO-bound tasks by a key and execute each within a coroutine, maintaining FIFO-order per group and increased 
 throughput compared to thread-based approaches.
